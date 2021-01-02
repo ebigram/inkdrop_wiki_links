@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": false,
+        "forceConsistentCasingInFileNames": true,
+        "module": "es6",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "checkJs": true,
+        "isolatedModules": true,
+        "noEmit": false,
+        "jsx": "react",
+        "listEmittedFiles": true
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "src/emojisense.js"]
+}

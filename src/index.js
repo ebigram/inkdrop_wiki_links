@@ -1,3 +1,4 @@
+/*global codeMirror*/
 import { markdownRenderer } from "inkdrop";
 import createRemarkWikiLink from "./wiki_link";
 import wikiLinkPlugin from "./wiki_link_plugin";
@@ -41,12 +42,22 @@ module.exports = {
         }
     },
     /** @param {CodeMirror.Editor} editor  **/
-    handleEditorDidLoad(editor) {
-        const { cm } = editor;
+    handleEditorDidLoad() {
+        // const { cm } = editor;
+        const activeEditor = inkdrop.getActiveEditorOrThrowError();
+        // cm.foobar = 1;
+        // otherThing.foobar = 2;
+        // debugger;
         //const cm = CodeMirror(document.getElementById('editor'))
+        // debugger;
 
         //cm.on(document.body,"beforeChange", (e)=>{e.preventDefault(); e.stopPropagation(); CodeMirror.Pass});
-        const cmEditor = new CodeMirrorEditor(codeMirror);
-        const textcomplete = new Textcomplete(cmEditor, [strategy], option);
+        const textcompleteEditor = new CodeMirrorEditor(activeEditor.cm);
+        // const textcompleteEditor = new CodeMirrorEditor(activeEditor.cm);
+        const textcomplete = new Textcomplete(
+            textcompleteEditor,
+            [strategy],
+            option
+        );
     },
 };
