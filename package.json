@@ -11,7 +11,7 @@
     ],
     "scripts": {
         "build": "babel src/ -s -d lib/",
-        "dev": "babel src/ -s -d lib/ --watch"
+        "dev": "babel src/ -s -d lib/ --watch --extensions '.ts'"
     },
     "engines": {
         "inkdrop": "^5.x"

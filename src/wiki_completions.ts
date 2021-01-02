@@ -28,7 +28,7 @@ const cmParentElement = document.querySelector(
 );
 
 export const gatherCandidates = async (term) => {
-    return [1, 2, 3, 4, 5];
+    // return [1, 2, 3, 4, 5];
     console.log(term);
     const note = await db.utils.search(`title:${term}`);
 
